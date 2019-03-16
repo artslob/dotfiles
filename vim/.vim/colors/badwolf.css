@@ -1,0 +1,30 @@
+a {
+    s:bwc.plain: #f8f6f2; /* 15 */
+    s:bwc.snow: #ffffff; /* 15 */
+    s:bwc.coal: #000000; /* 16 */
+    s:bwc.brightgravel: #d9cec3; /* 252 */
+    s:bwc.lightgravel: #998f84; /* 245 */
+    s:bwc.gravel: #857f78; /* 243 */
+    s:bwc.mediumgravel: #666462; /* 241 */
+    s:bwc.deepgravel: #45413b; /* 238 */
+    s:bwc.deepergravel: #35322d; /* 236 */
+    s:bwc.darkgravel: #242321; /* 235 */
+    "s:bwc.blackgravel: #1c1b1a; /* 0 */
+    s:bwc.blackgravel: #ffffff; /* 0 */
+    s:bwc.blackestgravel: #141413; /* 232 */
+    s:bwc.dalespale: #fade3e; /* 221 */
+    s:bwc.dirtyblonde: #f4cf86; /* 222 */
+    s:bwc.taffy: #ff2c4b; /* 196 */
+    s:bwc.saltwatertaffy: #8cffba; /* 121 */
+    s:bwc.tardis: #0a9dff; /* 39 */
+    s:bwc.orange: #ffa724; /* 214 */
+    s:bwc.lime: #aeee00; /* 154 */
+    s:bwc.dress: #ff9eb8; /* 211 */
+    s:bwc.toffee: #b88853; /* 137 */
+    s:bwc.coffee: #c7915b; /* 173 */
+    s:bwc.darkroast: #88633f; /* 95 */
+
+}
+
+/*let ([A-z:.]+)\s*=\s*\['(.{6})', (\d+)]*/
+/*$1: #$2; /* $3 */
