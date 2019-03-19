@@ -1,0 +1,13 @@
+{
+	"detect_indentation": true,
+	"font_size": 10,
+	"ignored_packages":
+	[
+		"MarkdownPreview",
+		"Vintage"
+	],
+	"show_encoding": true,
+	"tab_size": 4,
+	"theme": "Default.sublime-theme",
+	"translate_tabs_to_spaces": true
+}
