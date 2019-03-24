@@ -117,7 +117,7 @@ if ! shopt -oq posix; then
 fi
 
 
-source ~/.bash-config/bashrc.sh desktop
+source ~/.bash-config/bashrc.sh
 export PATH="${PATH}:/usr/local/go/bin"
 export GOPATH="${HOME}/go"
 

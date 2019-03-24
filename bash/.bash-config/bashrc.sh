@@ -1,8 +1,24 @@
 #!/usr/bin/env bash
 
-# in ~/.bashrc add line 'source this-script.sh <your_platform>'
-PLATFORM="${1}" # can be "desktop" or "vps" etc
 CURRENT_DIR="$(cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd)"
+
+get_platform() {
+    local PLATFORM_FILE="${CURRENT_DIR}/platform"
+    local DEFAULT_PLATFORM='desktop'
+
+    if [[ ! -r "$PLATFORM_FILE" ]]; then
+        echo -n "$DEFAULT_PLATFORM"
+        return
+    fi
+    PLATFORM="$(cat "$PLATFORM_FILE")"
+    if [[ ! -d "$PLATFORM" ]]; then
+        echo -n "$DEFAULT_PLATFORM"
+        return
+    fi
+    echo -n "$PLATFORM"
+}
+
+PLATFORM=`get_platform`
 
 get_config_value() {
     (
@@ -32,6 +48,7 @@ if [[ -e "${CURRENT_DIR}/local-namespace.sh" ]]; then
     source "${CURRENT_DIR}/local-namespace.sh" "${PLATFORM}"
 fi
 
-unset PLATFORM
 unset CURRENT_DIR
+unset -f get_platform
+unset PLATFORM
 unset -f get_config_value
