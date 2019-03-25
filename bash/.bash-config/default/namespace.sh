@@ -38,9 +38,3 @@ aptupgrade() { sudo apt upgrade; }
 aptupdateupgrade() { sudo apt update && sudo apt upgrade; }
 
 aptautoremove() { sudo apt autoremove; }
-
-git config --global alias.co 'commit'
-git config --global alias.st 'status'
-git config --global alias.df 'diff'
-git config --global alias.pu 'push'
-git config --global core.editor "vim"
