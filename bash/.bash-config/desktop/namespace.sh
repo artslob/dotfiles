@@ -1,9 +1,5 @@
 #!/usr/bin/env bash
 
-alias yad='yandex-disk'
-alias yadst='yandex-disk status'
-alias connect_vps='ssh vps'  # should be entry 'vps' in ~/.ssh/config
-
 restart_kde() { killall plasmashell && kstart plasmashell; }
 
 browser-with-proxy() {
