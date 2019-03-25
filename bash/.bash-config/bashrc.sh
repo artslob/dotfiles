@@ -22,9 +22,10 @@ PLATFORM=`get_platform`
 
 get_config_value() {
     (
-        source "${CURRENT_DIR}/config.sh" "${PLATFORM}"
-        if [[ -e "${CURRENT_DIR}/local-config.sh" ]]; then
-            source "${CURRENT_DIR}/local-config.sh" "${PLATFORM}"
+        source "${CURRENT_DIR}/default/config.sh"
+        source "${CURRENT_DIR}/${PLATFORM}/config.sh"
+        if [[ -e "${CURRENT_DIR}/local/config.sh" ]]; then
+            source "${CURRENT_DIR}/local/config.sh"
         fi
         echo "${!1}";
     )
@@ -36,7 +37,8 @@ PS1=$("${CURRENT_DIR}/set-ps-1.sh" \
         "$(get_config_value 'PS1_INCLUDE_HOST')" \
         )
 
-source "${CURRENT_DIR}/namespace.sh" "${PLATFORM}"
+source "${CURRENT_DIR}/default/namespace.sh"
+source "${CURRENT_DIR}/${PLATFORM}/namespace.sh"
 
 if [ "$(get_config_value 'SSH_AGENT_SETUP')" == "yes" ]; then
     source "${CURRENT_DIR}/ssh-agent-setup.sh" \
@@ -44,8 +46,8 @@ if [ "$(get_config_value 'SSH_AGENT_SETUP')" == "yes" ]; then
         "$(get_config_value 'SSH_AUTH_ENV')"
 fi
 
-if [[ -e "${CURRENT_DIR}/local-namespace.sh" ]]; then
-    source "${CURRENT_DIR}/local-namespace.sh" "${PLATFORM}"
+if [[ -e "${CURRENT_DIR}/local/namespace.sh" ]]; then
+    source "${CURRENT_DIR}/local/namespace.sh"
 fi
 
 unset CURRENT_DIR

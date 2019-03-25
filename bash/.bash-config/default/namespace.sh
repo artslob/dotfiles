@@ -27,7 +27,7 @@ tchsh() {
     _script="${_script%.sh}.sh"
 
     [[ -e "${_script}" ]] && { echo "File \"${_script}\" already exist."; return 0; }
- 
+
     touch "${_script}" 1>/dev/null 2>&1 || { echo "Could not create \"${_script}\"."; return 3; }
 
     chmod u+rwx "${_script}" || { echo "Could not change permissions for \"${_script}\"."; return 4; }
@@ -54,20 +54,3 @@ git config --global alias.st 'status'
 git config --global alias.df 'diff'
 git config --global alias.pu 'push'
 git config --global core.editor "vim"
-
-case "$1" in
-    desktop)
-        alias yad='yandex-disk'
-        alias yadst='yandex-disk status'
-        alias connect_vps='ssh vps'  # should be entry 'vps' in ~/.ssh/config
-        restart_kde() { killall plasmashell && kstart plasmashell; }
-        browser-with-proxy() {
-            ssh -f -N -D 7777 vps 2>&1 /dev/null && vivaldi --proxy-server="socks5://127.0.0.1:7777" &
-        }
-        ;;
-    vps)
-        alias save-iptables='sudo service netfilter-persistent save'
-        alias reload_nginx='sudo systemctl reload nginx.service'
-        alias restart_nginx='sudo systemctl restart nginx.service'
-        ;;
-esac
