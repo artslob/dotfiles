@@ -40,16 +40,15 @@ PS1=$("${CURRENT_DIR}/set-ps-1.sh" \
 for file in namespace.sh aliases.sh; do
     source "${CURRENT_DIR}/default/${file}"
     source "${CURRENT_DIR}/${PLATFORM}/${file}"
+    if [[ -r "${CURRENT_DIR}/local/${file}" ]]; then
+        source "${CURRENT_DIR}/local/${file}"
+    fi
 done
 
 if [ "$(get_config_value 'SSH_AGENT_SETUP')" == "yes" ]; then
     source "${CURRENT_DIR}/ssh-agent-setup.sh" \
         "$(get_config_value 'SSH_AUTH_SOCK')" \
         "$(get_config_value 'SSH_AUTH_ENV')"
-fi
-
-if [[ -e "${CURRENT_DIR}/local/namespace.sh" ]]; then
-    source "${CURRENT_DIR}/local/namespace.sh"
 fi
 
 unset CURRENT_DIR
