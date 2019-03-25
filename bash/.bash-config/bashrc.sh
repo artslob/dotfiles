@@ -11,7 +11,7 @@ get_platform() {
         return
     fi
     PLATFORM="$(cat "$PLATFORM_FILE")"
-    if [[ ! -d "$PLATFORM" ]]; then
+    if [[ ! -d "${CURRENT_DIR}/${PLATFORM}" ]]; then
         echo -n "$DEFAULT_PLATFORM"
         return
     fi
