@@ -2,7 +2,6 @@
 	email = artslob@yandex.ru
 	name = artslob
 [alias]
-	cm = commit
 	st = status
 	df = diff
 	co = commit
