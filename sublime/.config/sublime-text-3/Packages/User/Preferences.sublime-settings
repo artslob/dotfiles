@@ -1,16 +1,19 @@
 {
 	"detect_indentation": true,
+	"ensure_newline_at_eof_on_save": true,
 	"font_size": 10,
 	"ignored_packages":
 	[
 		"MarkdownPreview",
 		"Vintage"
 	],
+	"rulers":
+	[
+		120
+	],
 	"show_encoding": true,
 	"tab_size": 4,
 	"theme": "Default.sublime-theme",
 	"translate_tabs_to_spaces": true,
-	"ensure_newline_at_eof_on_save": true,
-	"rulers": [120],
-	"trim_trailing_white_space_on_save": true,
+	"trim_trailing_white_space_on_save": true
 }
