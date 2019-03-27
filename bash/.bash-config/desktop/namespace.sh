@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+export PATH="${PATH}:/usr/local/go/bin"
+export GOPATH="${HOME}/go"
+
 restart_kde() { killall plasmashell && kstart plasmashell; }
 
 browser-with-proxy() {
