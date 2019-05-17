@@ -31,10 +31,10 @@ tchsh() {
 
 vimsh() { local _out; _out="$(tchsh "$1")" && vim "${1%.sh}.sh" || echo "${_out}"; }
 
-aptupdate() { sudo apt update; }
+aptupdate() { sudo apt update && apt list --upgradable; }
 
 aptupgrade() { sudo apt upgrade; }
 
-aptupdateupgrade() { sudo apt update && sudo apt upgrade; }
+aptupdateupgrade() { aptupdate && sudo apt upgrade; }
 
 aptautoremove() { sudo apt autoremove; }
