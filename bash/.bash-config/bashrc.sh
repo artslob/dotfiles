@@ -60,3 +60,5 @@ unset CURRENT_DIR
 unset -f get_platform
 unset PLATFORM
 unset -f get_config_value
+unset dir
+unset file
