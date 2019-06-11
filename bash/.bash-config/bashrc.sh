@@ -13,7 +13,8 @@ get_platform() {
         echo "$LOCAL"
         return
     fi
-    cat "$PLATFORM_FILE" | while read -r dir; do
+    # awk below to remove duplicate lines
+    cat "$PLATFORM_FILE" | awk '!seen[$0]++' | while read -r dir; do
         if [[    "$dir" != "$DEFAULT_PLATFORM"
               && "$dir" != "$LOCAL"
               && -d "${CURRENT_DIR}/${dir}" ]];
