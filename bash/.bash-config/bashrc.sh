@@ -5,17 +5,23 @@ CURRENT_DIR="$(cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd)"
 get_platform() {
     local PLATFORM_FILE="${CURRENT_DIR}/platform"
     local DEFAULT_PLATFORM='default'
+    local LOCAL='local'
 
     echo "$DEFAULT_PLATFORM"
 
     if [[ ! -r "$PLATFORM_FILE" ]]; then
+        echo "$LOCAL"
         return
     fi
     cat "$PLATFORM_FILE" | while read -r dir; do
-        if [[ "$dir" != "$DEFAULT_PLATFORM" && -d "${CURRENT_DIR}/${dir}" ]]; then
+        if [[    "$dir" != "$DEFAULT_PLATFORM"
+              && "$dir" != "$LOCAL"
+              && -d "${CURRENT_DIR}/${dir}" ]];
+        then
             echo "$dir"
         fi
     done
+    echo "$LOCAL"
 }
 
 PLATFORM=`get_platform`
@@ -23,11 +29,10 @@ PLATFORM=`get_platform`
 get_config_value() {
     (
         for dir in $(echo $PLATFORM); do
-            source "${CURRENT_DIR}/${dir}/config.sh"
+            if [[ -e "${CURRENT_DIR}/${dir}/config.sh" ]]; then
+                source "${CURRENT_DIR}/${dir}/config.sh"
+            fi
         done
-        if [[ -e "${CURRENT_DIR}/local/config.sh" ]]; then
-            source "${CURRENT_DIR}/local/config.sh"
-        fi
         echo "${!1}";
     )
 }
@@ -39,9 +44,8 @@ PS1=$("${CURRENT_DIR}/set-ps-1.sh" \
 
 for dir in $(echo $PLATFORM); do
     for file in namespace.sh aliases.sh; do
-        source "${CURRENT_DIR}/${dir}/${file}"
-        if [[ -r "${CURRENT_DIR}/local/${file}" ]]; then
-            source "${CURRENT_DIR}/local/${file}"
+        if [[ -r "${CURRENT_DIR}/${dir}/${file}" ]]; then
+            source "${CURRENT_DIR}/${dir}/${file}"
         fi
     done
 done
