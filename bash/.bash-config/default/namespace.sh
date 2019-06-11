@@ -4,6 +4,8 @@
 export VISUAL="vim"
 export EDITOR="${VISUAL}"
 
+# PROMPT_DIRTRIM=2
+
 hisupt() { history -a; history -n; }
 
 tchsh() {

@@ -31,7 +31,6 @@ get_config_value() {
     )
 }
 
-# PROMPT_DIRTRIM=2
 PS1=$("${CURRENT_DIR}/set-ps-1.sh" \
         "$(get_config_value 'PS1_USER_COLOR')" \
         "$(get_config_value 'PS1_INCLUDE_HOST')" \
