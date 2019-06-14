@@ -166,3 +166,7 @@ bindsym $mod+F11             exec --no-startup-id amixer -D pulse sset Master 5%
 # increase sound volume
 bindsym XF86AudioRaiseVolume exec --no-startup-id amixer -D pulse sset Master 5%+
 bindsym $mod+F12             exec --no-startup-id amixer -D pulse sset Master 5%+
+
+# autostart applications
+exec --no-startup-id /opt/telegram/Telegram -startintray
+exec --no-startup-id skypeforlinux
