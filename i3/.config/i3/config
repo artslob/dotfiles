@@ -167,6 +167,9 @@ bindsym $mod+F11             exec --no-startup-id amixer -D pulse sset Master 5%
 bindsym XF86AudioRaiseVolume exec --no-startup-id amixer -D pulse sset Master 5%+
 bindsym $mod+F12             exec --no-startup-id amixer -D pulse sset Master 5%+
 
+# monitor setup
+exec_always --no-startup-id ~/.config/i3/monitor-setup/setup.sh
+
 # autostart applications
 exec --no-startup-id /opt/telegram/Telegram -startintray
 exec --no-startup-id skypeforlinux
