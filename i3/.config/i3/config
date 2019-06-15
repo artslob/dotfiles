@@ -156,6 +156,10 @@ bar {
         status_command i3status
 }
 
+# language layout setup
+exec_always --no-startup-id "setxkbmap -layout us,ru"
+exec_always --no-startup-id "setxkbmap -option 'grp:alt_shift_toggle'"
+
 # lock window
 bindsym $mod+l exec i3lock
 
