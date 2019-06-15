@@ -156,6 +156,9 @@ bar {
         status_command i3status
 }
 
+# lock window
+bindsym $mod+l exec i3lock
+
 # Pulse Audio controls
 # mute sound
 bindsym XF86AudioMute        exec --no-startup-id amixer -D pulse sset Master toggle
