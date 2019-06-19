@@ -156,6 +156,9 @@ bar {
         status_command i3blocks -c ~/.config/i3/i3blocks/i3blocks.conf
 }
 
+# run browser
+bindsym $mod+Shift+Return exec vivaldi --password-store=kwallet
+
 # language layout setup
 exec_always --no-startup-id "setxkbmap -layout us,ru"
 exec_always --no-startup-id "setxkbmap -option 'grp:alt_shift_toggle'"
