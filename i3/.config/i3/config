@@ -187,3 +187,4 @@ exec_always --no-startup-id ~/.config/i3/monitor-setup/setup.sh
 exec --no-startup-id /opt/telegram/Telegram -startintray
 exec --no-startup-id skypeforlinux
 exec --no-startup-id /usr/share/libpam-kwallet-common/pam_kwallet_init
+exec --no-startup-id shutter --min_at_startup
