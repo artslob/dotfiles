@@ -171,14 +171,14 @@ bindsym $mod+l exec i3lock
 
 # Pulse Audio controls
 # mute sound
-bindsym XF86AudioMute        exec --no-startup-id amixer -D pulse sset Master toggle
-bindsym $mod+F10             exec --no-startup-id amixer -D pulse sset Master toggle
+bindsym XF86AudioMute        exec --no-startup-id amixer -D pulse sset Master toggle && pkill -RTMIN+10 i3blocks
+bindsym $mod+F10             exec --no-startup-id amixer -D pulse sset Master toggle && pkill -RTMIN+10 i3blocks
 # decrease sound volume
-bindsym XF86AudioLowerVolume exec --no-startup-id amixer -D pulse sset Master 5%-
-bindsym $mod+F11             exec --no-startup-id amixer -D pulse sset Master 5%-
+bindsym XF86AudioLowerVolume exec --no-startup-id amixer -D pulse sset Master 5%- && pkill -RTMIN+10 i3blocks
+bindsym $mod+F11             exec --no-startup-id amixer -D pulse sset Master 5%- && pkill -RTMIN+10 i3blocks
 # increase sound volume
-bindsym XF86AudioRaiseVolume exec --no-startup-id amixer -D pulse sset Master 5%+
-bindsym $mod+F12             exec --no-startup-id amixer -D pulse sset Master 5%+
+bindsym XF86AudioRaiseVolume exec --no-startup-id amixer -D pulse sset Master 5%+ && pkill -RTMIN+10 i3blocks
+bindsym $mod+F12             exec --no-startup-id amixer -D pulse sset Master 5%+ && pkill -RTMIN+10 i3blocks
 
 # monitor setup
 exec_always --no-startup-id ~/.config/i3/monitor-setup/setup.sh
