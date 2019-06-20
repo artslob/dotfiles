@@ -156,6 +156,9 @@ bar {
         status_command i3blocks -c ~/.config/i3/i3blocks/i3blocks.conf
 }
 
+# set wallpaper
+exec_always --no-startup-id ~/.config/i3/wallpaper.sh
+
 # run browser
 bindsym $mod+Shift+Return exec vivaldi --password-store=kwallet
 
