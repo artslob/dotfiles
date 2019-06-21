@@ -9,6 +9,8 @@ else
     exit
 fi
 
-if [[ -x "${scripts}/${layout}.sh" ]]; then
-    "${scripts}/${layout}.sh"
+setup_script="${scripts}/${layout%.sh}.sh"
+
+if [[ -x "$setup_script" ]]; then
+    "$setup_script"
 fi
