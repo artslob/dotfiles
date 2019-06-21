@@ -1,16 +1,14 @@
 #!/usr/bin/env bash
 
-settings_folder="${HOME}/.config/i3/monitor-setup"
-settings_file="${settings_folder}/layout"
+scripts="${HOME}/.config/i3/monitor-setup"
+layout_file="${scripts}/layout"
 
-settings="laptop-primary"
-
-if [[ -r "$settings_file" ]]; then
-    settings="$(cat $settings_file)"
+if [[ -r "$layout_file" ]]; then
+    layout="$(cat $layout_file)"
+else
+    exit
 fi
 
-if [[ -x "${settings_folder}/${settings}.sh" ]]; then
-    "${settings_folder}/${settings}.sh"
-else
-    "${settings_folder}/laptop-primary.sh"
+if [[ -x "${scripts}/${layout}.sh" ]]; then
+    "${scripts}/${layout}.sh"
 fi
