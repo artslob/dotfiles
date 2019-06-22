@@ -158,6 +158,9 @@ bar {
         status_command i3blocks -c ~/.config/i3/i3blocks/i3blocks.conf
 }
 
+# switch back to the previously focused workspace
+bindsym $mod+Tab workspace back_and_forth
+
 # set wallpaper
 exec_always --no-startup-id ~/.config/i3/wallpaper.sh
 
