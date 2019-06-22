@@ -195,3 +195,4 @@ exec --no-startup-id skypeforlinux
 exec --no-startup-id /usr/share/libpam-kwallet-common/pam_kwallet_init
 exec --no-startup-id shutter --min_at_startup
 exec --no-startup-id yandex-disk start
+exec --no-startup-id nm-applet
