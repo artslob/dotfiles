@@ -161,6 +161,10 @@ bar {
 # switch back to the previously focused workspace
 bindsym $mod+Tab workspace back_and_forth
 
+# switch to next and prev workspace on current output
+bindsym $mod+Next  workspace next_on_output
+bindsym $mod+Prior workspace prev_on_output
+
 # set wallpaper
 exec_always --no-startup-id ~/.config/i3/wallpaper.sh
 
