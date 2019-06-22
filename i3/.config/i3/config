@@ -165,9 +165,6 @@ bindsym $mod+Tab workspace back_and_forth
 bindsym $mod+Next  workspace next_on_output
 bindsym $mod+Prior workspace prev_on_output
 
-# set wallpaper
-exec_always --no-startup-id ~/.config/i3/wallpaper.sh
-
 # run browser
 bindsym $mod+Shift+Return exec vivaldi --password-store=kwallet
 
@@ -189,8 +186,8 @@ bindsym $mod+F11             exec --no-startup-id amixer -D pulse sset Master 5%
 bindsym XF86AudioRaiseVolume exec --no-startup-id amixer -D pulse sset Master 5%+ && pkill -RTMIN+10 i3blocks
 bindsym $mod+F12             exec --no-startup-id amixer -D pulse sset Master 5%+ && pkill -RTMIN+10 i3blocks
 
-# monitor setup
-exec_always --no-startup-id ~/.config/i3/monitor-setup/setup.sh
+# monitor and wallpaper setup
+exec_always --no-startup-id "~/.config/i3/monitor-setup/setup.sh; ~/.config/i3/wallpaper.sh"
 
 # autostart applications
 exec --no-startup-id /opt/telegram/Telegram -startintray
