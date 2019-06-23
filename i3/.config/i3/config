@@ -177,14 +177,14 @@ bindsym $mod+l exec i3lock
 
 # Pulse Audio controls
 # mute sound
-bindsym XF86AudioMute        exec --no-startup-id amixer -D pulse sset Master toggle && pkill -RTMIN+10 i3blocks
-bindsym $mod+F10             exec --no-startup-id amixer -D pulse sset Master toggle && pkill -RTMIN+10 i3blocks
+bindsym XF86AudioMute        exec --no-startup-id "amixer -D pulse sset Master toggle; py3-cmd refresh volume_status"
+bindsym $mod+F10             exec --no-startup-id "amixer -D pulse sset Master toggle; py3-cmd refresh volume_status"
 # decrease sound volume
-bindsym XF86AudioLowerVolume exec --no-startup-id amixer -D pulse sset Master 5%- && pkill -RTMIN+10 i3blocks
-bindsym $mod+F11             exec --no-startup-id amixer -D pulse sset Master 5%- && pkill -RTMIN+10 i3blocks
+bindsym XF86AudioLowerVolume exec --no-startup-id "amixer -D pulse sset Master 5%-;    py3-cmd refresh volume_status"
+bindsym $mod+F11             exec --no-startup-id "amixer -D pulse sset Master 5%-;    py3-cmd refresh volume_status"
 # increase sound volume
-bindsym XF86AudioRaiseVolume exec --no-startup-id amixer -D pulse sset Master 5%+ && pkill -RTMIN+10 i3blocks
-bindsym $mod+F12             exec --no-startup-id amixer -D pulse sset Master 5%+ && pkill -RTMIN+10 i3blocks
+bindsym XF86AudioRaiseVolume exec --no-startup-id "amixer -D pulse sset Master 5%+;    py3-cmd refresh volume_status"
+bindsym $mod+F12             exec --no-startup-id "amixer -D pulse sset Master 5%+;    py3-cmd refresh volume_status"
 
 # monitor and wallpaper setup
 exec_always --no-startup-id "~/.config/i3/monitor-setup/setup.sh; ~/.config/i3/wallpaper.sh"
