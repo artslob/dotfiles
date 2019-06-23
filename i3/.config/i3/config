@@ -155,7 +155,7 @@ bindsym $mod+r mode "resize"
 bar {
         font pango:DejaVu Sans Mono, Font Awesome 5 Free Regular 9.5
 
-        status_command i3blocks -c ~/.config/i3/i3blocks/i3blocks.conf
+        status_command py3status -c ~/.config/i3/py3status.conf
 }
 
 # switch back to the previously focused workspace
