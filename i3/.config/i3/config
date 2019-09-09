@@ -189,10 +189,11 @@ exec_always --no-startup-id "~/.config/i3/monitor-setup/setup.sh; ~/.config/i3/w
 exec_always --no-startup-id "setxkbmap -layout us,ru -option 'grp:alt_shift_toggle'"
 
 # autostart applications
+exec --no-startup-id /usr/share/libpam-kwallet-common/pam_kwallet_init
 exec --no-startup-id /opt/telegram/Telegram -startintray
 exec --no-startup-id skypeforlinux
-exec --no-startup-id /usr/share/libpam-kwallet-common/pam_kwallet_init
 exec --no-startup-id shutter --min_at_startup
 exec --no-startup-id yandex-disk start
 exec --no-startup-id nm-applet
 exec --no-startup-id dunst
+exec --no-startup-id slack
