@@ -1,3 +1,5 @@
 /vim/.vim/.netrwhist
 /i3/.config/i3/monitor-setup/layout
 *.swp
+# dolphin metadata
+.directory
