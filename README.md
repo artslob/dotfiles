@@ -6,6 +6,6 @@
     ```
     sudo apt install qt5ct
     export QT_QPA_PLATFORMTHEME="qt5ct"
-    qt5ct  # choose required theme (I use Breeze)
+    qt5ct  # choose required theme and icon theme (I use Breeze)
     ```
     Then add `export QT_QPA_PLATFORMTHEME="qt5ct"` to `.bashrc`.
