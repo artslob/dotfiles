@@ -1,3 +1,15 @@
+! This is config for xmodmap: https://wiki.archlinux.org/index.php/xmodmap
+! What it does:
+! 1. disable caps lock;
+! 2. maps to CapsLock button (code 66) control action;
+! 3. maps to Ctrl button (code 37) escape action.
+! Notes:
+! 1. "keycode" commands should be before "add control";
+!    If I understood right, "Control_L" and "Escape" are labels (keysyms) for keycodes,
+!    "add control" finds keycodes with labels listed on right side of this command
+!    and assigns them to "control" modifier key.
+! 2. to find keycode of a button run `xev` command;
+! 3. useful flags for xmodmap are -pm and -pke.
 clear lock
 clear control
 keycode 66 = Control_L Control_R
