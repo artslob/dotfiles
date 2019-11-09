@@ -3,3 +3,4 @@
 *.swp
 # dolphin metadata
 .directory
+.idea
