@@ -186,7 +186,7 @@ bindsym $mod+F12             exec --no-startup-id "amixer -D pulse sset Master 5
 exec_always --no-startup-id "~/.config/i3/monitor-setup/setup.sh; ~/.config/i3/wallpaper.sh"
 
 # keyboard language layout setup
-exec_always --no-startup-id "setxkbmap -layout us,ru -option 'grp:alt_shift_toggle'"
+exec_always --no-startup-id "setxkbmap -layout us,ru -option 'grp:alt_shift_toggle'; xmodmap ~/.Xmodmap"
 
 # autostart applications
 exec --no-startup-id /usr/share/libpam-kwallet-common/pam_kwallet_init
