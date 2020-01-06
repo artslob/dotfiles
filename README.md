@@ -17,6 +17,16 @@ And add this text:
 suppress.focus.stealing=false
 ```
 
+## Background image for i3lock
+To crate background image from svg run this:
+```bash
+sudo apt install imagemagick
+convert input.svg -resize 1366x768 -gravity center -extent 1366x768 out.png
+# to lock screen
+i3lock -fe -i out.png
+```
+Change `1366x768` to your desired screen resolution.
+
 ## Useful links
 1. [Configuration of Qt5 apps under environments other than KDE Plasma](https://wiki.archlinux.org/index.php/Qt#Configuration_of_Qt5_apps_under_environments_other_than_KDE_Plasma)  
     TLDR: How to setup icons in dolphin:
