@@ -169,7 +169,7 @@ bindsym $mod+Prior workspace prev_on_output
 bindsym $mod+Shift+Return exec vivaldi --password-store=kwallet
 
 # lock window
-bindsym $mod+l exec i3lock
+bindsym $mod+l exec i3lock -fe -i ~/.lock-background.png
 
 # Pulse Audio controls
 # mute sound
