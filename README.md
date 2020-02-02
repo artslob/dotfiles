@@ -27,6 +27,11 @@ i3lock -fe -i out.png
 ```
 Change `1366x768` to your desired screen resolution.
 
+## Default file manager
+```bash
+xdg-mime default org.kde.dolphin.desktop inode/directory
+```
+
 ## Useful links
 1. [Configuration of Qt5 apps under environments other than KDE Plasma](https://wiki.archlinux.org/index.php/Qt#Configuration_of_Qt5_apps_under_environments_other_than_KDE_Plasma)  
     TLDR: How to setup icons in dolphin:
