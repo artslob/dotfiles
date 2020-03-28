@@ -1,5 +1,11 @@
 # Dotfiles
 
+## Chromium default flags
+Edit `/etc/chromium-browser/default`:
+```
+CHROMIUM_FLAGS="--password-store=kwallet"
+```
+
 ## PyCharm setup
 There is some annoying
 [behaviour](https://intellij-support.jetbrains.com/hc/en-us/community/posts/360001411659-Lose-Focus-after-Switching-Workspace-in-i3wm)
