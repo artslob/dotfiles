@@ -6,5 +6,6 @@
 	df = diff
 	co = commit
 	pu = push
+	ch = checkout
 [core]
 	editor = vim
