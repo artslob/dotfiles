@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 # aliases, variables and functions
 
+alias g='git'
+
 export VISUAL="vim"
 export EDITOR="${VISUAL}"
 
