@@ -4,6 +4,7 @@
 [alias]
 	st = status
 	df = diff
+	dfc = diff --cached
 	co = commit
 	pu = push
 	ch = checkout
