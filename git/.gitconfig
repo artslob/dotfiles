@@ -2,6 +2,7 @@
 	email = artslob@yandex.ru
 	name = artslob
 [alias]
+	a  = add
 	st = status
 	df = diff
 	dfc = diff --cached
