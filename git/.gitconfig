@@ -3,6 +3,7 @@
 	name = artslob
 [alias]
 	a  = add
+	s  = status
 	st = status
 	df = diff
 	dfc = diff --cached
