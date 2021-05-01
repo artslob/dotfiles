@@ -1,5 +1,41 @@
 # Dotfiles
 
+## GNU Stow
+I use stow for managing symlinks from config paths to actual dotfiles.
+
+Stow terminology in case of specific use case for managing dotfiles:
+* stow directory - directory contains separate packages in private subdirectories.
+  In our case is root of this project `<project>`.
+* package - related collection of files. This is program you want to manage with dotfiles, e.g.
+  "bash", "vim", etc. So it is also dir in this project, like `<project>/bash` or `<project>/vim`.
+* target directory - root of tree where dotfiles should be installed. In our case
+  is `${HOME}`.
+* installation image - files that should be installed to target dir,
+  these are actual config files and paths to them relative to target dir.
+
+```bash
+# clone this project to ~/.dotfiles
+cd ~/.dotfiles
+# use -n flag to not perform modifications, just show them
+stow -d "${HOME}/.dotfiles" -t "$HOME" -vv alacritty/
+```
+
+So this command basically does this:
+```
+<stow dir> / <package> / <installation image>
+linked by
+<$HOME> / <installation image>
+```
+In case of Alacritty:
+```
+<$HOME/.dotfiles> / <alacritty> / <.config/alacritty/alacritty.yml>
+linked by
+<$HOME> / <.config/alacritty/alacritty.yml>
+
+Full symlink:
+$HOME/.config/alacritty/alacritty.yml -> ../../.dotfiles/alacritty/.config/alacritty/alacritty.yml
+```
+
 ## Nerd Fonts
 For coding I use [JetBrains Mono](https://www.jetbrains.com/lp/mono/) font,
 but patched by [Nerd Fonts](https://www.nerdfonts.com):
