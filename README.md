@@ -24,14 +24,12 @@ suppress.focus.stealing=false
 ```
 
 ## Background image for i3lock
-To crate background image from svg run this:
+I use [fallout-svg](https://github.com/artslob/fallout-svg) for my lock screen.
+Svg can be resized to any screen resolution.
+
 ```bash
-sudo apt install imagemagick
-convert input.svg -resize 1366x768 -gravity center -extent 1366x768 out.png
-# to lock screen
-i3lock -fe -i out.png
+i3lock -fe -i ~/.lock-background.png
 ```
-Change `1366x768` to your desired screen resolution.
 
 ## Default file manager
 ```bash
