@@ -1,5 +1,15 @@
 # Dotfiles
 
+## Nerd Fonts
+For coding I use [JetBrains Mono](https://www.jetbrains.com/lp/mono/) font,
+but patched by [Nerd Fonts](https://www.nerdfonts.com):
+1. Download zip
+1. Copy `.ttf` files to `~/.local/share/fonts`
+1. `fc-cache -fv` - rebuild the font cache
+1. `fc-list` - show all installed fonts
+
+You can try different fonts on [programmingfonts.org](https://www.programmingfonts.org/#jetbrainsmono).
+
 ## Chromium default flags
 Edit `/etc/chromium-browser/default`:
 ```
