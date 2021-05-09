@@ -1,12 +1,18 @@
 #!/usr/bin/env bash
 # aliases, variables and functions
 
-alias g='git'
-
 export VISUAL="vim"
 export EDITOR="${VISUAL}"
 
 # PROMPT_DIRTRIM=2
+
+if command -v starship 1>/dev/null 2>&1; then
+    eval "$(starship init bash)"
+fi
+
+if [ -r ~/.bash_completions/alacritty ]; then
+    source ~/.bash_completions/alacritty
+fi
 
 hisupt() { history -a; history -n; }
 
