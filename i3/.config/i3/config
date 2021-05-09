@@ -182,12 +182,12 @@ bindsym $mod+F11             exec --no-startup-id "amixer -D pulse sset Master 5
 bindsym XF86AudioRaiseVolume exec --no-startup-id "amixer -D pulse sset Master 5%+;    py3-cmd refresh volume_status"
 bindsym $mod+F12             exec --no-startup-id "amixer -D pulse sset Master 5%+;    py3-cmd refresh volume_status"
 
-# monitor and wallpaper setup
-exec_always --no-startup-id "~/.config/i3/monitor-setup/setup.sh; ~/.config/i3/wallpaper.sh"
-
 # keyboard language layout setup
 # man xkeyboard-config
 exec_always --no-startup-id "setxkbmap -layout us,ru -option 'grp:toggle'; xmodmap ~/.Xmodmap"
+
+# monitor and wallpaper setup
+exec_always --no-startup-id "~/.config/i3/monitor-setup/setup.sh; ~/.config/i3/wallpaper.sh"
 
 # autostart applications
 exec --no-startup-id /usr/share/libpam-kwallet-common/pam_kwallet_init
