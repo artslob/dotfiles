@@ -38,7 +38,11 @@ $HOME/.config/alacritty/alacritty.yml -> ../../.dotfiles/alacritty/.config/alacr
 
 ## Nerd Fonts
 For coding I use [JetBrains Mono](https://www.jetbrains.com/lp/mono/) font,
-but patched by [Nerd Fonts](https://www.nerdfonts.com):
+but patched by [Nerd Fonts](https://www.nerdfonts.com).  
+For workspace bar icons (i3bar, py3status, polybar) I use free version of
+[Font Awesome 6](https://fontawesome.com/download) for the desktop.
+
+How to install fonts:
 1. Download zip
 1. Copy `.ttf` files to `~/.local/share/fonts`
 1. `fc-cache -fv` - rebuild the font cache
