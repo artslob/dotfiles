@@ -6,6 +6,19 @@ export EDITOR="${VISUAL}"
 
 # PROMPT_DIRTRIM=2
 
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+if command -v pyenv 1>/dev/null 2>&1; then
+    eval "$(pyenv init -)"
+    eval "$(pyenv virtualenv-init -)"
+fi
+
+if [ -r "$HOME/.cargo/env" ]; then
+    source "$HOME/.cargo/env"
+fi
+
+export PATH="$HOME/bin:$PATH"
+
 if command -v starship 1>/dev/null 2>&1; then
     eval "$(starship init bash)"
 fi
