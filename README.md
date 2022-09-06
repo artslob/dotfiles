@@ -36,6 +36,14 @@ Full symlink:
 $HOME/.config/alacritty/alacritty.yml -> ../../.dotfiles/alacritty/.config/alacritty/alacritty.yml
 ```
 
+## Current stack
+
+1. Window Manager - [i3](https://github.com/i3/i3)
+2. Status Bar - [polybar](https://github.com/polybar/polybar) v3.6.3
+3. Screen Locker - [i3lock](https://github.com/i3/i3lock)
+4. Terminal - [alacritty](https://github.com/alacritty/alacritty) v0.10.1
+5. Screenshot Tool - [shutter](https://github.com/shutter-project/shutter)
+
 ## Nerd Fonts
 For coding I use [JetBrains Mono](https://www.jetbrains.com/lp/mono/) font,
 but patched by [Nerd Fonts](https://www.nerdfonts.com).  
