@@ -44,11 +44,12 @@ $HOME/.config/alacritty/alacritty.yml -> ../../.dotfiles/alacritty/.config/alacr
 4. Terminal - [alacritty](https://github.com/alacritty/alacritty) v0.10.1
 5. Screenshot Tool - [shutter](https://github.com/shutter-project/shutter)
 
-## Nerd Fonts
-For coding I use [JetBrains Mono](https://www.jetbrains.com/lp/mono/) font,
+## Fonts
+For terminal I use [JetBrains Mono](https://www.jetbrains.com/lp/mono/) font,
 but patched by [Nerd Fonts](https://www.nerdfonts.com).  
 For workspace bar icons (i3bar, py3status, polybar) I use free version of
-[Font Awesome 6](https://fontawesome.com/download) for the desktop.
+[Font Awesome 6 for the desktop](https://fontawesome.com/download) and
+for bar text I use non-patched version of JetBrains Mono.
 
 How to install fonts:
 1. Download zip
