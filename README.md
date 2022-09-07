@@ -42,7 +42,8 @@ $HOME/.config/alacritty/alacritty.yml -> ../../.dotfiles/alacritty/.config/alacr
 2. Status Bar - [polybar](https://github.com/polybar/polybar) v3.6.3
 3. Screen Locker - [i3lock](https://github.com/i3/i3lock)
 4. Terminal - [alacritty](https://github.com/alacritty/alacritty) v0.10.1
-5. Screenshot Tool - [shutter](https://github.com/shutter-project/shutter)
+5. Application Launcher - [rofi](https://github.com/davatorium/rofi) v1.5.4
+6. Screenshot Tool - [shutter](https://github.com/shutter-project/shutter)
 
 ## Fonts
 For terminal I use [JetBrains Mono](https://www.jetbrains.com/lp/mono/) font,
