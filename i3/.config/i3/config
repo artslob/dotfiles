@@ -26,6 +26,10 @@ font pango:JetBrains Mono 9
 # X core fonts rendering does not support right-to-left and this being a bitmap
 # font, it doesn’t scale on retina/hidpi displays.
 
+default_border pixel 3
+default_floating_border pixel 3
+hide_edge_borders smart
+
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
