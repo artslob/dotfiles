@@ -30,6 +30,9 @@ default_border pixel 3
 default_floating_border pixel 3
 hide_edge_borders smart
 
+# class                 border  backgr. text    indicator child_border
+client.focused          #F0C674 #373B41 #FFFFFF #FFFFFF   #F0C674
+
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
