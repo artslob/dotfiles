@@ -38,7 +38,7 @@ $HOME/.config/alacritty/alacritty.yml -> ../../.dotfiles/alacritty/.config/alacr
 
 ## Current stack
 
-1. Window Manager - [i3](https://github.com/i3/i3)
+1. Window Manager - [i3-gaps](https://github.com/Airblader/i3) v4.19.1
 2. Status Bar - [polybar](https://github.com/polybar/polybar) v3.6.3
 3. Screen Locker - [i3lock](https://github.com/i3/i3lock)
 4. Terminal - [alacritty](https://github.com/alacritty/alacritty) v0.10.1

@@ -30,6 +30,10 @@ default_border pixel 3
 default_floating_border pixel 3
 hide_edge_borders smart
 
+# i3-gaps settings
+gaps inner 12
+smart_gaps on
+
 # class                 border  backgr. text    indicator child_border
 client.focused          #9ECE6A #373B41 #FFFFFF #FFFFFF   #9ECE6A
 
