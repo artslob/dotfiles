@@ -41,9 +41,13 @@ $HOME/.config/alacritty/alacritty.yml -> ../../.dotfiles/alacritty/.config/alacr
 1. Window Manager - [i3-gaps](https://github.com/Airblader/i3) v4.19.1
 2. Status Bar - [polybar](https://github.com/polybar/polybar) v3.6.3
 3. Screen Locker - [i3lock](https://github.com/i3/i3lock)
-4. Terminal - [alacritty](https://github.com/alacritty/alacritty) v0.10.1
-5. Application Launcher - [rofi](https://github.com/davatorium/rofi) v1.5.4
-6. Screenshot Tool - [shutter](https://github.com/shutter-project/shutter)
+4. Terminal - [alacritty](https://github.com/alacritty/alacritty) v0.10.1 🦀
+5. Shell - bash
+6. Shell Prompt - [starship](https://github.com/starship/starship) 🦀
+7. Application Launcher - [rofi](https://github.com/davatorium/rofi) v1.5.4
+8. Screenshot Tool - [shutter](https://github.com/shutter-project/shutter)
+
+🦀 = made with [Rust](https://www.rust-lang.org/)
 
 ## Fonts
 For terminal I use [JetBrains Mono](https://www.jetbrains.com/lp/mono/) font,
