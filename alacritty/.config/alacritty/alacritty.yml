@@ -229,15 +229,15 @@ colors:
   # Search colors
   #
   # Colors used for the search bar and match highlighting.
-  #search:
+  search:
     # Allowed values are CellForeground/CellBackground, which reference the
     # affected cell, or hexadecimal colors like #ff00ff.
-    #matches:
-    #  foreground: '#000000'
-    #  background: '#ffffff'
-    #focused_match:
-    #  foreground: '#ffffff'
-    #  background: '#000000'
+    matches:
+      foreground: '#000000'
+      background: '#9ece6a'
+    focused_match:
+      foreground: '#ffffff'
+      background: '#d00000'
 
     #bar:
     #  background: '#c5c8c6'
