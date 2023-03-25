@@ -185,6 +185,10 @@ bindsym $mod+F11             exec --no-startup-id "amixer -D pulse sset Master 5
 bindsym XF86AudioRaiseVolume exec --no-startup-id "amixer -D pulse sset Master 5%+;    py3-cmd refresh volume_status"
 bindsym $mod+F12             exec --no-startup-id "amixer -D pulse sset Master 5%+;    py3-cmd refresh volume_status"
 
+# notifications
+bindsym $mod+bracketleft  exec --no-startup-id "dunstctl history-pop"
+bindsym $mod+bracketright exec --no-startup-id "dunstctl close"
+
 # keyboard language layout setup
 # man xkeyboard-config
 exec_always --no-startup-id "setxkbmap -layout us,ru -option 'grp:toggle'; xmodmap ~/.Xmodmap"
