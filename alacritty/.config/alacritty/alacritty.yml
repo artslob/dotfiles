@@ -757,6 +757,7 @@ key_bindings:
   #- { key: Home,      mods: Shift,   mode: ~Alt,        action: ScrollToTop,   }
   #- { key: End,       mods: Shift,   mode: ~Alt,        action: ScrollToBottom }
   - { key: K,       mods: Control|Shift,   mode: ~Alt,   command: { program: "bash", args: ["-c", "~/.config/alacritty/clear-focused-tty.sh"] } }
+  - { key: K,       mods: Control|Shift,   mode: ~Alt,   chars: "\x0d" }
 
   # Vi Mode
   #- { key: Space,  mods: Shift|Control, mode: ~Search,    action: ToggleViMode            }
