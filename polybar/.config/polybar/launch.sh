@@ -7,6 +7,6 @@ polybar-msg cmd quit
 # killall -q polybar
 
 echo "---" | tee -a /tmp/polybar.log
-polybar -c "${HOME}/.config/polybar/config.ini" 2>&1 | tee -a /tmp/polybar.log & disown
+polybar main -c "${HOME}/.config/polybar/config.ini" 2>&1 | tee -a /tmp/polybar.log & disown
 
 echo "Polybar launched..."
